@@ -1,4 +1,8 @@
-= link_to "Post Pic", new_pic_path
 
-- @pics.each do |pic|
-    %h2= link_to pic.title, pic
+.col-md-4.col-md-offset-4
+    #pics.transitions-enabled
+        - @pics.each do |pic|
+            .box.panel-default
+                = link_to (image_tag pic.image.url), pic
+                %h4.well
+                    = link_to pic.title, pic

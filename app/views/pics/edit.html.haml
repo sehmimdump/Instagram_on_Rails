@@ -1,5 +1,11 @@
-%h1 Fix Pix!
-
-= render 'form'
-
-= link_to "Exit", root_path
+.container
+    .col-md-8.col-md-offset-2
+        .row
+            .panel.panel-default
+                .panel-heading
+                    %h1 Edit Pix!
+                .panel-body
+                    .current_image
+                        %strong.center Right Now
+                        = image_tag @pic.image.url(:medium)
+                    = render 'form'
