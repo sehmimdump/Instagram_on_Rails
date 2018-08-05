@@ -45,6 +45,10 @@ class PicsController < ApplicationController
         redirect_to root_path
     end
 
+    def show_only_to_owner
+        @pic.id == current_user.id
+    end
+
     private 
 
     def pic_params
